@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Page Code Extractor",
+  "version": "1.0",
+  "description": "Extracts HTML, CSS, and JavaScript of the current page into a ZIP file.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Extract Page Code"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+} 
